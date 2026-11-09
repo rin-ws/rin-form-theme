@@ -1,0 +1,24 @@
+.contact-form { display: grid; gap: 19px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.contact-form label { display: grid; gap: 8px; color: #26384b; font-size: .88rem; font-weight: 600; }
+.contact-form label > span, .contact-form label > small { display: inline; }
+.contact-form label > small { color: #8793a0; font-size: .76rem; font-weight: 400; }
+.contact-form label > span { color: #bd6d34; }
+.contact-form input:not([type="checkbox"]), .contact-form select, .contact-form textarea { width: 100%; border: 1px solid #d7dfe6; border-radius: 9px; padding: 13px 14px; color: var(--ink); background: white; font: inherit; font-size: .92rem; outline: none; transition: border-color .15s, box-shadow .15s; }
+.contact-form textarea { resize: vertical; min-height: 150px; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #b98136; box-shadow: 0 0 0 3px rgba(231,168,75,.16); }
+.privacy-check { display: flex !important; grid-template-columns: auto 1fr; align-items: start; gap: 10px !important; color: #536273 !important; font-weight: 400 !important; }
+.privacy-check input { width: 17px; height: 17px; margin: 3px 0 0; accent-color: var(--navy-2); }
+.form-actions { display: flex; align-items: center; gap: 18px; margin-top: 3px; }
+.form-actions button, .button-link { display: inline-flex; justify-content: center; align-items: center; gap: 24px; min-height: 52px; padding: 0 22px; border: 0; border-radius: 8px; color: var(--navy); background: var(--accent); font: inherit; font-size: .9rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .15s, background .15s; }
+.form-actions button:hover, .button-link:hover { transform: translateY(-2px); background: #f0bd70; }
+.form-actions button span, .button-link span { font-size: 1.15rem; }
+.form-actions p { color: #8793a0; font-size: .76rem; }
+.form-status { margin: 0; padding: 13px 15px; border-left: 3px solid var(--accent); border-radius: 0 7px 7px 0; color: #647386; background: #faf6ef; font-size: .8rem; }
+.privacy-note { margin: 17px 0 0; color: #8793a0; font-size: .76rem; }
+
+@media (max-width: 560px) {
+  .form-actions { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .form-row, .sidebar { grid-template-columns: 1fr; }
+  .form-actions button { width: 100%; }
+}
